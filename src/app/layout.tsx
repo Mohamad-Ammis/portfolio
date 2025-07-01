@@ -14,6 +14,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+      (function() {
+        try {
+          var theme = localStorage.getItem("theme");
+          if (!theme || theme === "dark") {
+            document.documentElement.classList.add("dark");
+          }
+        } catch (_) {}
+      })();
+    `,
+        }}
+      />
+
       <body>
         <Providers>
           <main>{children}</main>
