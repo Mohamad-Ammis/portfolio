@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #ededed;
+  --deep-background: #e8e8e8;
   --foreground: #171717;
+  --primary: #5e3bee;
+  --onPrimary: #ffffff;
+  --text-primary: #000000;
+  --text-secondry: #1e1e1e;
+  --background-shade: #f5fcff;
+
+  --card-background-color: #e5e5e5;
+  --secondry-card-background-color: #2121210a;
+  --card-light-background-color: #f0f0f0;
+}
+.dark {
+  --foreground: #ffffff;
+  --background: #101010;
+  --deep-background: #000000;
+  --primary: #5e3bee;
+  --onPrimary: #ffffff;
+  --text-primary: #ffffff;
+  --background-shade: #1e1e1e;
+  --text-secondry: #d0cdcd;
+
+  --card-background-color: #171717;
+  --secondry-card-background-color: #171717;
+  --card-light-background-color: #0a0a0a;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-deep-background: var(--deep-background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: var(--primary);
+  --color-text-secondry: var(--text-secondry);
+  --color-text-primary: var(--text-primary);
+  --color-background-shade: var(--background-shade);
+  --color-card-background-color: var(--card-background-color);
+  --color-secondry-card-background-color: var(--secondry-card-background-color);
+  --color-card-light-background-color: var(--card-light-background-color);
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-primary);
+  font-family: "Poppins";
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.poppins {
+  font-family: "Poppins";
 }
