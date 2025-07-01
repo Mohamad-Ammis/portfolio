@@ -32,7 +32,7 @@ export default function GetInTouch() {
   return (
     <div className="bg-deep-background flex items-center justify-center flex-col px-4 pt-10 pb-2">
       <CustomSectionHeader title="Get in touch" />
-      <div className="grid gap-6 grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] w-full max-w-5xl">
+      <div className="grid gap-6 grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] w-full max-w-5xl px-10 md:px-4 ">
         {socials.map((e, index) => {
           return (
             <SocialCard

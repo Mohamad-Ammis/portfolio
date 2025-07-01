@@ -20,6 +20,7 @@
   height: 100%;
   fill: none;
   stroke: var(--color-primary);
+  opacity: 0;
   stroke-width: 2;
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
@@ -31,6 +32,7 @@
 
 .tool-card:hover .animated-border {
   stroke-dashoffset: 0;
+  opacity: 1;
 }
 
 .tool-card img,
