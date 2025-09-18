@@ -1,11 +1,9 @@
 "use client";
-
+import Galaxy from "@/components/Galaxy";
 import { useTheme } from "next-themes";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import CustomNavBar from "./components/custom_nav_bar";
 import LandingAboutMeInfo from "./components/landing_about_me_info";
-import LandingProfileImage from "./components/landing_profile_image";
 
 export default function Landing() {
   const { theme } = useTheme();
@@ -25,19 +23,19 @@ export default function Landing() {
         isDark ? "bg-black" : "bg-background-shade"
       }`}
     >
-      {/* Background Animation - GIF */}
+      {/* Background Animation - Galaxy */}
       {isDark && (
-        <>
-          <Image
-            src="/test.gif"
-            alt="Stars Background Animation"
-            layout="fill"
-            objectFit="cover"
-            className="z-0 opacity-30 pointer-events-none"
-            priority
+        <div className="absolute inset-0 z-0">
+          <Galaxy
+            mouseRepulsion={true}
+            mouseInteraction={true}
+            density={1}
+            glowIntensity={0.3}
+            twinkleIntensity={0.5}
+            repulsionStrength={5.0}
           />
-          <div className="absolute inset-0 bg-black/70 z-0" />
-        </>
+          <div className="absolute inset-0 bg-black/70" />
+        </div>
       )}
 
       <div
@@ -51,7 +49,7 @@ export default function Landing() {
 
         <div className="flex flex-1 justify-center items-center flex-col md:flex-row px-10 gap-10 md:gap-30">
           <LandingAboutMeInfo />
-          <LandingProfileImage />
+          {/* <LandingProfileImage /> */}
         </div>
       </div>
     </div>

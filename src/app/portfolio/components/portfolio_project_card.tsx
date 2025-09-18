@@ -1,19 +1,23 @@
 "use client";
+import { PortfolioInterface } from "@/lib/interfaces/portfolioInterface";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { VscLinkExternal } from "react-icons/vsc";
+import { useRouter } from "next/navigation";
 
 export interface PortfolioProjectCard {
-  image: string;
-  title: string;
-  description: string;
-  link?: string;
+  portfolioInterface: PortfolioInterface;
   index: number;
 }
 
 export default function PortfolioProjectCard(props: PortfolioProjectCard) {
+  const router = useRouter();
   return (
     <motion.div
+      onClick={() => {
+        router.push(
+          `/portfolio/project_details/${props.portfolioInterface.id}`
+        );
+      }}
       initial={{ opacity: 0, y: 0 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
@@ -21,24 +25,19 @@ export default function PortfolioProjectCard(props: PortfolioProjectCard) {
       className="relative group rounded-[10px]   overflow-hidden cursor-pointer transition-all duration-300 will-change-transform"
     >
       <Image
-        src={props.image}
-        alt={props.image}
+        src={props.portfolioInterface.thumbnail}
+        alt={props.portfolioInterface.thumbnail}
         width={300}
         height={300}
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 will-change-transform"
       />
       <div className="absolute h-full inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-start p-4">
-        <p className="text-white font-bold mb-4">{props.title}</p>
-        <p className="text-[#d0cdcd] text-sm mt-1">{props.description}</p>
-        {props.link && (
-          <a
-            href={props.link}
-            target="_blank"
-            className="mt-3 text-text-secondry text-xs flex items-center gap-1 hover:text-text-primary transition-all"
-          >
-            View Details <VscLinkExternal />
-          </a>
-        )}
+        <p className="text-white font-bold text-2xl mb-4 mt-2">
+          {props.portfolioInterface.appName}
+        </p>
+        <p className="text-[#d0cdcd] text-sm mt-1 line-clamp-4 break-words overflow-ellipsis">
+          {props.portfolioInterface.shortDescription}
+        </p>
       </div>
     </motion.div>
   );

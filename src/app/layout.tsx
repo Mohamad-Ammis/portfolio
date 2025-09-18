@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "../app/globals.css";
 import { Providers } from "./providers";
 
@@ -14,21 +15,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-      (function() {
-        try {
-          var theme = localStorage.getItem("theme");
-          if (!theme || theme === "dark") {
-            document.documentElement.classList.add("dark");
-          }
-        } catch (_) {}
-      })();
-    `,
-        }}
-      />
-
+      <head>
+        <Script id="theme-script" strategy="beforeInteractive">
+          {`
+            (function() {
+              try {
+                var theme = localStorage.getItem("theme");
+                if (!theme || theme === "dark") {
+                  document.documentElement.classList.add("dark");
+                }
+              } catch (_) {}
+            })();
+          `}
+        </Script>
+      </head>
       <body>
         <Providers>
           <main>{children}</main>

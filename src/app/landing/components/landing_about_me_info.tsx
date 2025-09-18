@@ -8,7 +8,7 @@ export default function LandingAboutMeInfo() {
   const isDark = theme === "dark";
 
   return (
-    <div className="md:w-1/2 text-center md:text-left">
+    <div className="md:w-1/2 text-center flex items-center flex-col justify-center">
       <BlurText
         text="👋Hello i'am "
         delay={150}
@@ -41,7 +41,7 @@ I craft cross-platform mobile experiences with a focus on performance, clean cod
         to={{ opacity: 1, y: 0 }}
         threshold={0.1}
         rootMargin="-100px"
-        textAlign="start"
+        textAlign="center"
         onLetterAnimationComplete={() => {}}
       />
 
