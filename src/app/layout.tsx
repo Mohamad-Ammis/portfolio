@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "../app/globals.css";
 import { Providers } from "./providers";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 export const metadata: Metadata = {
   title: "Mohamad Ammis",
   description: "Mohamad Ammis Flutter Developer",
