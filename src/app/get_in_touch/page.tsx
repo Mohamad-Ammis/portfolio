@@ -10,23 +10,21 @@ export default function GetInTouch() {
       title: "linkedin",
       link: "https://www.linkedin.com/in/mohamad-ammis",
     },
+    // {
+    //   image:
+    //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg",
+    //   title: "facebook",
+    //   link: "https://www.linkedin.com/in/mohamad-ammis",
+    // },
     {
-      image:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg",
-      title: "facebook",
-      link: "https://www.linkedin.com/in/mohamad-ammis",
+      image: "https://cdn-icons-png.flaticon.com/128/733/733553.png",
+      title: "Github",
+      link: "https://github.com/Mohamad-Ammis/",
     },
     {
-      image:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
-      title: "linkedin",
-      link: "https://www.linkedin.com/in/mohamad-ammis",
-    },
-    {
-      image:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg",
-      title: "facebook",
-      link: "https://www.linkedin.com/in/mohamad-ammis",
+      image: "https://cdn-icons-png.flaticon.com/128/2504/2504727.png",
+      title: "Gmail",
+      link: "mailto:mohamad.ammis@gmail.com",
     },
   ];
   return (

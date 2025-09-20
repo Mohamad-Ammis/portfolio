@@ -61,14 +61,17 @@ export default function PortfolioProjectDetailsLandingSection({
         {/* links */}
         <div className="flex flex-row items-center gap-4 mt-5">
           {portfolioInterface.projectDetails.links.map((e) => (
-            <button
-              key={portfolioInterface.id}
+            <a
+              key={e.link}
+              href={e.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="max-w-[200px] relative flex flex-row items-center gap-x-2 overflow-hidden text-[var(--text-primary)] hover:text-[var(--onPrimary)] px-6 py-2 rounded-[8px] cursor-pointer transition-all duration-300 border border-white/50 hover:border-primary
-            after:content-[''] after:absolute after:inset-0 after:bg-[var(--primary)] after:z-0 after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
+                    after:content-[''] after:absolute after:inset-0 after:bg-[var(--primary)] after:z-0 after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
             >
               <IoIosLink className="relative z-10" />
               <span className="relative z-10">{e.title}</span>
-            </button>
+            </a>
           ))}
         </div>
       </div>

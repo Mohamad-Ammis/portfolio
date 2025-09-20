@@ -5,6 +5,7 @@ const nextConfig = {
     domains: [
       "skillicons.dev",
       "user-images.githubusercontent.com",
+      "cdn-icons-png.flaticon.com",
     ],
   },
 };

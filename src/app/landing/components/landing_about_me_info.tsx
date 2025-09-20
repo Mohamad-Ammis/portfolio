@@ -23,7 +23,7 @@ export default function LandingAboutMeInfo() {
         animateBy="words"
         direction="bottom"
         onAnimationComplete={() => {}}
-        className="text-4xl md:text-5xl font-bold text-primary"
+        className="text-3xl md:text-5xl font-bold text-primary"
       />
       <SplitText
         text="Turning Ideas Into Beautiful & Functional Flutter Apps.

@@ -1,5 +1,3 @@
-import ThemeSwitcher from "@/core/theme/ThemeSwitcher";
-
 export default function CustomNavBarActionsSection() {
   return (
     <div className="flex gap-5 md:items-center flex-col md:flex-row  w-full justify-start items-start">
@@ -9,7 +7,7 @@ export default function CustomNavBarActionsSection() {
       >
         <span className="relative z-10">Contact</span>
       </button>
-      <ThemeSwitcher />
+      {/* <ThemeSwitcher /> */}
     </div>
   );
 }
