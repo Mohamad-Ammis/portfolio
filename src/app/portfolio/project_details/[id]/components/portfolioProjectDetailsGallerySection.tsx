@@ -51,7 +51,6 @@ export default function PortfolioProjectDetailsGallerySection({
                   width={300}
                   height={225}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                  unoptimized
                 />
               </motion.div>
             </div>
@@ -91,7 +90,6 @@ export default function PortfolioProjectDetailsGallerySection({
               alt={`Project Image ${currentIndex + 1}`}
               fill
               className="object-contain"
-              unoptimized
             />
           </div>
 
@@ -129,7 +127,7 @@ export default function PortfolioProjectDetailsGallerySection({
                   width={64}
                   height={48}
                   className="object-cover w-full h-full"
-                  unoptimized
+                  quality={80}
                 />
               </div>
             ))}
